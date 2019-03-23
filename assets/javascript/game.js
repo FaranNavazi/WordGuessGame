@@ -133,7 +133,7 @@ function checkWin() {
     document.getElementById("youwin-image").style.cssText = "display: block";
     document.getElementById("pressKeyTryAgain").style.cssText =
       "display: block";
-    wins++;
+    
     hasFinished = true;
   }
 }

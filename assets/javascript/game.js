@@ -55,9 +55,10 @@ function resetGame() {
   }
 
   document.getElementById("pressKeyTryAgain").style.cssText = "display: none";
-  document.getElementById("gameOver-image").style.cssText = "display: none";
+  document.getElementById("gameover-image").style.cssText = "display: none";
   document.getElementById("youwin-image").style.cssText = "display: none";
 
+  hasFinished = false;
   updateDisplay();
 }
 
@@ -84,7 +85,7 @@ function updateDisplay() {
 document.onkeydown = function(event) {
   if (hasFinished) {
     resetGame();
-    hasFinished = false;
+    
   } else {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
       makeGuess(event.key.toLowerCase());
